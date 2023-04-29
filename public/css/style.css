@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header h1 {
+    text-align: center;
+}
+
+
+
+/* SUM SECTION */
+
+#sum-section {
+    display: flex;
+    justify-content: center;
+}
+
+#sum-container {
+    width: 10rem;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-template-rows: repeat(3, 5rem);
+    grid-template-areas: 
+        ". num1"
+        "operation num2"
+        "answer answer";
+    gap: 1rem;
+}
+
+#num1 {
+    grid-area: num1;
+}
+
+#num2 {
+    grid-area: num2;
+}
+
+#operation {
+    grid-area: operation;
+}
+
+#answer {
+    grid-area: answer;
+    border: 2px black solid;
+}
+
+#answer:focus {
+    outline: none;
+}
+
+.sum-element {
+    /* background-color: rgb(230, 255, 255); */
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3em;
+    text-align: right;
+}
+
+
+
+
+/* DETAILS SECTION */
+
+#details-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#timer-container {
+    width: 100vw;
+    position: relative;
+}
+
+#timer {
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#timer-bar {
+    position: absolute;
+    background-color: rgb(0, 255, 0);
+    left: 0;
+    top: 0;
+    height: 3em;
+    z-index: -1;
+}
+
+#points {    
+    margin-top: 5rem;
+    font-size: 7em;
+    padding: 1rem;
+    color:rgb(94, 189, 189);
+    border-radius: 10rem;
+    
+}
